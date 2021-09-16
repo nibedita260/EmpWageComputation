@@ -6,7 +6,8 @@ namespace EmpWage
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Emp Wage Program");
+            EmpWageComputation empWageComputation = new EmpWageComputation();
+            empWageComputation.Attendance();
         }
     }
 }
