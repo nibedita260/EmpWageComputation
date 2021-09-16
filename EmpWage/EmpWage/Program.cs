@@ -7,7 +7,7 @@ namespace EmpWage
         static void Main(string[] args)
         {
             EmpWageComputation empWageComputation = new EmpWageComputation();
-            empWageComputation.Attendance();
+            empWageComputation.EmpWageCal();
         }
     }
 }
