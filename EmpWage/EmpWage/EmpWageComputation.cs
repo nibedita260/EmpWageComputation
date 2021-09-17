@@ -6,14 +6,14 @@ namespace EmpWage
 {
     class EmpWageComputation
     {
-        const int IS_PRESENT = 1, WAGE_PER_HOUR = 20, FULL_DAY_HR = 8, PART_DAY_HR = 4, IS_FULLTIME = 1, IS_PARTTIME = 2,WORKING_DAY_MONTH=20, TOTAL_WORKING_HRS=100;
+        const int  FULL_DAY_HR = 8, PART_DAY_HR = 4, IS_FULLTIME = 1, IS_PARTTIME = 2;
         int totalEmpWage = 0, empHrs = 0, workingDays = 0;
         
-        public void EmpWageCal()
+        public int  ComputeEmpWage(string company,int wage_per_hr,int total_working_hrs,int working_day_month)
         {
             Random random = new Random();
             int empCheck = random.Next(0, 3);
-            while (workingDays < WORKING_DAY_MONTH && empHrs <= TOTAL_WORKING_HRS)
+            while (workingDays < working_day_month && empHrs <= total_working_hrs)
             {
                 workingDays = workingDays + 1;
                 switch (empCheck)
@@ -32,8 +32,9 @@ namespace EmpWage
             }
             //cal wages till workinghrs is 100 and workingdays is 20
             Console.WriteLine("working hrs: " + empHrs + ",working days:" + workingDays);
-            totalEmpWage = empHrs * WAGE_PER_HOUR;
-                Console.WriteLine("Total emp wage is: "+totalEmpWage);
+            totalEmpWage = empHrs * wage_per_hr;
+                Console.WriteLine("Total employee wage for "+company+ " of "+working_day_month+ " days is :" + totalEmpWage);
+            return totalEmpWage;
         }
     }
 }

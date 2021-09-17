@@ -7,7 +7,8 @@ namespace EmpWage
         static void Main(string[] args)
         {
             EmpWageComputation empWageComputation = new EmpWageComputation();
-            empWageComputation.EmpWageCal();
+            Console.WriteLine(empWageComputation.ComputeEmpWage("bridgelabz",20,100,20));
+            Console.WriteLine(empWageComputation.ComputeEmpWage("Google", 100, 100, 20));
         }
     }
 }
