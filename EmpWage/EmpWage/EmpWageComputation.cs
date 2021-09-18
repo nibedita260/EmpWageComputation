@@ -4,11 +4,10 @@ using System.Text;
 
 namespace EmpWage
 {
-    class EmpWageComputation
+    class EmpWageComputation: IEmpWageComputation
     {
         const int  FULL_DAY_HR = 8, PART_DAY_HR = 4, IS_FULLTIME = 1, IS_PARTTIME = 2;
         int totalEmpWage = 0, empHrs = 0, workingDays = 0;
-        
         public int  ComputeEmpWage(string company,int wage_per_hr,int total_working_hrs,int working_day_month)
         {
             Random random = new Random();
